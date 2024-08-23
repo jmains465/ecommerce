@@ -1,0 +1,22 @@
+.box1 {
+    position: relative;
+    background-color: #f6f6f6;
+    height: 200px;
+}
+.box1a {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+.box1b {
+    position: absolute;
+    top: 55%;
+    left: 78%;
+    color: grey;
+}
+.box2 {
+    height: 200px;
+}
+#x1 {
+    height: 100px;
+}

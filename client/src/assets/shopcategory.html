@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .header {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            z-index: 99;
+            width: 100%;
+        }
+        .topbar {
+            width: 100%;
+            background-color: #eff2f3;
+            position: relative;
+            font-size: 12px;
+        }
+        .topbarleft {
+            margin-left: 150px;
+            display: flex;
+            width: 35%;
+            font-size: 12px;
+        }
+        .topbarleft p {
+            font-size: small;
+            padding: 5px;
+            margin-left: 13px;
+        }
+        .topbarright
+        {
+            position: absolute;
+            top: 0%;
+            left: 70%;
+            width: 30%;
+        }
+        .topbarright ul li {
+            list-style-type: none;
+            padding: 5px;
+            display: inline-block;
+        }
+        .secondbar
+         {
+            background-color: white;
+            width: 100%;
+            position: sticky;
+            top: 0px;
+            z-index: 99;
+
+        }
+        .b1 {
+            width: 10%;
+            margin-left: 135px;
+            padding: 20px;
+        }
+        .b2 {
+            position: absolute;
+            left: 30%;
+            top: 0%;
+            padding: 30px;
+        }
+        .b2 ul li {
+            display: inline-block;
+            font-size: 18px;
+            margin-left: 40px;
+        }
+        .b3 {
+            position: absolute;
+            width: 20%;
+            left: 80%;
+            top: 20%;
+        }
+        .b3 span {
+            margin-left: 10px;
+        }
+        .box1 {
+            position: relative;
+            background-color: #f6f6f6;
+            height: 200px;
+        }
+        .box1a {
+            position: absolute;
+            top: 40%;
+            left: 10%;
+        }
+        .box1b {
+            position: absolute;
+            top: 55%;
+            left: 78%;
+            color: grey;
+        }
+        .box2 {
+            height: 200px;
+        }
+        #x1 {
+            height: 100px;
+        }
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1217px;
+                margin-left: 123px;
+                display: grid;
+                grid-template-columns: 1.25fr 4fr;
+            }
+        }
+        .rightbox {
+            margin-left: 30px;
+            margin-top: 5px;
+        }
+        .leftb1 {
+            color: gray;
+            margin-top: 5px;
+            border: 1px solid #eff2f3;
+            padding: 15px;
+        }
+        .title {
+
+
+            padding: 10px;
+            font-size: 13px;
+            border-bottom: 1px solid green;
+        }
+        .option {
+            margin: 30px;
+        }
+        .box3 {
+            background-color: #f6f6f6;
+            ;
+            display: flex;
+            width: 100%;
+        }
+        .default {
+            padding: 12px;
+            margin-left: 26px;
+        }
+        .default1 {
+            background-color: white;
+            border: none;
+            width: 200px;
+            height: 38px;
+            font-size: medium;
+        }
+        .sort12 {
+            background-color: white;
+            border: none;
+            width: 200px;
+            height: 38px;
+            font-size: medium;
+        }
+        .box4 {
+            display: grid;
+            height: 100%;
+            grid-template-columns: 3fr 3fr 3fr;
+            column-gap: 30px;
+            margin-top: 40px;
+        }
+        .b41 {
+            height: 370px;
+            border-bottom: 0.5 gray;
+        }
+        .b41 img {
+            width: 100%;
+        }
+        .inner2 {
+            padding: 9px;
+        }
+        .inner2 p {
+            font-size: large;
+        }
+        .inner3 {
+            position: relative;
+        }
+        .i1 {
+            font-size: 28px;
+            padding: 10px;
+        }
+        .i2 {
+            color: gray;
+            position: absolute;
+            top: 15px;
+            left: 130px;
+            font-size: 18px;
+        }
+        .footer {
+            height: 500px;
+            width: 100%;
+            background-color: #0d0d1f;
+            position: relative;
+        }
+        .f1 {
+
+            height: 200px;
+            width: 80%;
+            position: absolute;
+            top: 100px;
+            left: 147px;
+            display: grid;
+            grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.3fr;
+            column-gap: 10px;
+        }
+        .f2 {
+
+            height: 200px;
+        }
+        .f2 h3 {
+            padding: 10px;
+            margin-left: 3px;
+            color: white;
+        }
+        .f2 p {
+            padding: 8px;
+            margin-left: 8px;
+            color: grey;
+            position: relative;
+        }
+        .y1 {
+            background-color: rgba(255, 255, 255, 0.15);
+            height: 40px;
+            width: 220px;
+            margin-left: 19px;
+        }
+        #email {
+            height: 40px;
+            width: 220px;
+            border: none;
+            /* margin-left: 15px; */
+            color: black;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        .y2 {
+            background-color: green;
+            position: absolute;
+            top: 68%;
+            left: 90%;
+            padding: 5px;
+        }
+        .z1 {
+            position: absolute;
+            top: 76%;
+            left: 11%;
+            display: grid;
+            grid-template-columns: 9fr 5fr;
+            column-gap: 270px;
+        }
+        .z12{
+            display:flex;
+            margin-left: 20px;
+            align-items: center;
+        }
+        .z13 {
+            background-color:rgba(255,255,255,0.15);
+            width: 32px;
+            height:30px;
+            margin-left:25px;
+            text-align: center;
+        }
+
+        .inner1 {
+
+            height: 270px;
+            background-color: yellow;
+            overflow: hidden;
+        }
+
+        .cart-info 
+        {
+            height: 60px;
+            background-color: rgba(113, 205, 20, 0.4);
+            transition: all 400ms ease;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            justify-content: center;
+            gap: 25px;
+        }
+        .circle
+         {
+            margin-top: 3px;
+            height: 40px;
+            width: 42px;
+            border-radius: 50px;
+            background-color: white;
+            text-align: center;
+            transition: all 400ms ease;
+        }
+        .circle i
+        {
+            margin-top: 12px;
+        }
+        .b41:hover .cart-info {
+            transform: translateY(-60px);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="topbar">
+            <div class="topbarleft">
+                <p>PHONE: +01 256 25 235</p>
+                <p>|</p>
+                <p>EMAIL: INFO@EISER.COM</p>
+            </div>
+            <div class="topbarright">
+                <ul>
+                    <li>Gift card</li>
+                    <li>|</li>
+                    <li>Track Order</li>
+                    <li>|</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="secondbar">
+        <div class="b1"><img src="https://themewagon.github.io/eiser/img/logo.png" alt=""></div>
+        <div class="b2">
+            <ul>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>Blog</li>
+                <li>Pages</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="b3">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <span><i class="fa-solid fa-cart-shopping"></i></span>
+            <span><i class="fa-solid fa-address-book"></i></span>
+            <span><i class="fa-regular fa-heart"></i></span>
+        </div>
+    </div>
+    <div class="box1">
+        <div class="box1a">
+            <h2>Shop Category</h1>
+                <h3 style="color:gray;">Very us move be blessed multiply night</h3>
+        </div>
+        <div class="box1b">
+            <span>Home</span>
+            <span>/</span>
+            <span>Shop</span>
+            <span>/</span>
+            <span>Women Fashion</span>
+        </div>
+    </div>
+    <div class="box2" id="x1"></div>
+    <div class="container">
+        <div class="leftbox">
+            <div class="leftb1">
+                <div class="title">
+                    <h2>Browse Category</h2>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option1" name="option" value="option1">
+                    <label for="option1">Frozen Fish</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option2" name="option" value="option2">
+                    <label for="option2">Dried Fish</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option3" name="option" value="option3">
+                    <label for="option3">Fresh Fish</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option4" name="option" value="option4">
+                    <label for="option4">Meat Alternatives</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option5" name="option" value="option5">
+                    <label for="option5">Fresh Fish</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option5" name="option" value="option5">
+                    <label for="option5">Meat Alternatives</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option5" name="option" value="option5">
+                    <label for="option5">Meat</label>
+                </div>
+            </div>
+            <div class="leftb1">
+                <div class="title">
+                    <h2>Product Brand</h2>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option1" name="option" value="option1">
+                    <label for="option1">Apple</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option2" name="option" value="option2">
+                    <label for="option2">Asus</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option3" name="option" value="option3">
+                    <label for="option3">Gionee</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option4" name="option" value="option4">
+                    <label for="option4">Micromax</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option5" name="option" value="option5">
+                    <label for="option5">Samsung</label>
+                </div>
+            </div>
+            <div class="leftb1">
+                <div class="title">
+                    <h2>Color Filter</h2>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option1" name="option" value="option1">
+                    <label for="option1">Black</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option2" name="option" value="option2">
+                    <label for="option2">Black Leather</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option3" name="option" value="option3">
+                    <label for="option3">Black with Red</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option4" name="option" value="option4">
+                    <label for="option4">Gold</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="option5" name="option" value="option5">
+                    <label for="option5">Spacegray</label>
+                </div>
+            </div>
+            <div class="leftb1">
+                <div class="title">
+                    <h2>Price Filter</h2>
+                </div>
+                <label for="rangeInput">price</label>
+                <input type="range" id="rangeInput" min="0" max="100" value="50"
+                    oninput="updateValueDisplay(this.value)">
+                <div id="valueDisplay">50</div>
+            </div>
+        </div>
+        <div class="rightbox">
+            <div class="box3">
+                <div class="default">
+                    <select class="default1" id="" name="">
+                        <option value=" Default Sorting">Default Sorting</option>
+                        <option value="Defualt Sorting 01">Defualt Sorting 01</option>
+                        <option value="Default Sorting 02">Default Sorting 02</option>
+                    </select>
+                </div>
+                <div class="default">
+                    <select class="sort12" id="" name="">
+                        <option value=" sort 12">sort 12</option>
+                        <option value="sort 14">sort 14</option>
+                        <option value="sort 16">sort 16</option>
+                    </select>
+                </div>
+                <div class="show12"></div>
+            </div>
+            <div class="box4">
+                <div class="b41">
+                    <div class="inner1"><img
+                            src="https://themewagon.github.io/eiser/img/product/inspired-product/i1.jpg" alt="">
+                        <div class="cart-info">
+                            <div class="circle">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner2">
+                        <p>Latest Men's Sneaker</p>
+                    </div>
+                    <div class="inner3">
+                        <div class="i1">$25.00</div>
+                        <div class="i2"><del>$35.00</del></div>
+                    </div>
+                </div>
+                <div class="b41">
+                    <div class="inner1"><img
+                            src="	https://themewagon.github.io/eiser/img/product/inspired-product/i2.jpg" alt="">
+                        <div class="cart-info">
+                            <div class="circle">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner2">
+                        <p>Latest Men's Sneaker</p>
+                    </div>
+                    <div class="inner3">
+                        <div class="i1">$25.00</div>
+                        <div class="i2"><del>$35.00</del></div>
+                    </div>
+                </div>
+                <div class="b41">
+                    <div class="inner1"><img
+                            src="https://themewagon.github.io/eiser/img/product/inspired-product/i3.jpg" alt="">
+                        <div class="cart-info">
+                            <div class="circle">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner2">
+                        <p>Latest Men's Sneaker</p>
+                    </div>
+                    <div class="inner3">
+                        <div class="i1">$25.00</div>
+                        <div class="i2"><del>$35.00</del></div>
+                    </div>
+                </div>
+                <div class="b41">
+                    <div class="inner1"><img
+                            src="https://themewagon.github.io/eiser/img/product/inspired-product/i6.jpg" alt="">
+                        <div class="cart-info">
+                            <div class="circle">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner2">
+                        <p>Latest Men's Sneaker</p>
+                    </div>
+                    <div class="inner3">
+                        <div class="i1">$25.00</div>
+                        <div class="i2"><del>$35.00</del></div>
+                    </div>
+                </div>
+                <div class="b41">
+                    <div class="inner1"><img
+                            src="https://themewagon.github.io/eiser/img/product/inspired-product/i4.jpg" alt="">
+                        <div class="cart-info">
+                            <div class="circle">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner2">
+                        <p>Latest Men's Sneaker</p>
+                    </div>
+                    <div class="inner3">
+                        <div class="i1">$25.00</div>
+                        <div class="i2"><del>$35.00</del></div>
+                    </div>
+                </div>
+                <div class="b41">
+                    <div class="inner1"><img
+                            src="	https://themewagon.github.io/eiser/img/product/inspired-product/i5.jpg" alt="">
+                        <div class="cart-info">
+                            <div class="circle">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner2">
+                        <p>Latest Men's Sneaker</p>
+                    </div>
+                    <div class="inner3">
+                        <div class="i1">$25.00</div>
+                        <div class="i2"><del>$35.00</del></div>
+                    </div>
+                </div>
+                <div class="b41">
+                    <div class="inner1"><img
+                            src="https://themewagon.github.io/eiser/img/product/inspired-product/i7.jpg" alt="">
+                        <div class="cart-info">
+                            <div class="circle">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner2">
+                        <p>Latest Men's Sneaker</p>
+                    </div>
+                    <div class="inner3">
+                        <div class="i1">$25.00</div>
+                        <div class="i2"><del>$35.00</del></div>
+                    </div>
+                </div>
+                <div class="b41">
+                    <div class="inner1"><img
+                            src="https://themewagon.github.io/eiser/img/product/inspired-product/i8.jpg" alt="">
+                        <div class="cart-info">
+                            <div class="circle">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner2">
+                        <p>Latest Men's Sneaker</p>
+                    </div>
+                    <div class="inner3">
+                        <div class="i1">$25.00</div>
+                        <div class="i2"><del>$35.00</del></div>
+                    </div>
+                </div>
+                <div class="b41">
+                    <div class="inner1"><img
+                            src="https://themewagon.github.io/eiser/img/product/inspired-product/i2.jpg" alt="">
+                        <div class="cart-info">
+                            <div class="circle">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="circle">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner2">
+                        <p>Latest Men's Sneaker</p>
+                    </div>
+                    <div class="inner3">
+                        <div class="i1">$25.00</div>
+                        <div class="i2"><del>$35.00</del></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box2"></div>
+    <div class="footer">
+        <div class="f1">
+            <div class="f2">
+                <h3>Top products</h3><br>
+                <p>Managed Website</p>
+                <p>Managed Reputations</p>
+                <p>Power Tools</p>
+                <p>Marketing Services</p>
+            </div>
+            <div class="f2">
+                <h3>Quick links</h3><br>
+                <p>jobs</p>
+                <p>Brand assets</p>
+                <p>investor relations</p>
+                <p>terms of Services</p>
+            </div>
+            <div class="f2">
+                <h3>Features</h3><br>
+                <p>jobs</p>
+                <p>Brand assets</p>
+                <p>investor relations</p>
+                <p>terms of Services</p>
+            </div>
+            <div class="f2">
+                <h3>Resources</h3><br>
+                <p>Guides</p>
+                <p>Research</p>
+                <p>Agencies</p>
+                <p>Experts</p>
+            </div>
+            <div class="f2">
+                <h3>Newsletter</h3>
+                <p>You can trust us. we only send promo offers</p><br><br>
+                <div class="y1">
+                    <label for="email" placeholder="enter your mail"></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="y2">Subscribe</div>
+            </div>
+
+        </div>
+        <div class="z1">
+            <div class="z11">
+                <p style="color: white;">Copyright ©2024 All rights reserved | This template is made with <i
+                        class="fa-regular fa-heart"></i> by Colorlib</p>
+            </div>
+            <div class="z12">
+                <div class="z13">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="z13">
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                </div>
+                <div class="z13">
+                    <span><i class="fa-brands fa-whatsapp"></i></span>
+                </div>
+                <div class="z13">
+                    <span><i class="fa-brands fa-google"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
